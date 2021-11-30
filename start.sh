@@ -5,7 +5,7 @@ __run() {
 }
 
 __start() {
-  sleep 1m
+  sleep 2m
   #程序名
   RUN_NAME="$1"
   #jar 位置
