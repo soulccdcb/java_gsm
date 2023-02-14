@@ -28,6 +28,8 @@ VOLUME /var/www
 WORKDIR /var/www
 
 RUN npm config set registry https://registry.npm.taobao.org/ && npm install pm2 -g
+RUN pm2 install pm2-logrotate
+RUN pm2 set pm2-logrotate:max_size 300M
 
 
 ENTRYPOINT ["/bin/bash", "/start.sh"]
